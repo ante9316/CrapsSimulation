@@ -80,7 +80,7 @@ public class PlayWithInheritance
 		}
 		else if (RUN_EXAMPLE == 6)
 		{
-			Die another = new Die();
+			Die anotherDie = new Die();
 
 			Dice dice = new Dice(die1, crooked1); // we'll try substituting here
 

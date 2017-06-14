@@ -67,15 +67,15 @@ public class CrapsGame
 		{
 			println("Point is: " + point);
 			
-			int value = 0;
+			int rolledValue = 0;
 			do
 			{
 				dice.roll();
 				steps++;
-				value = dice.getLastRoll();
-				println("Next roll is: " + value);
+				rolledValue = dice.getLastRoll();
+				println("Next roll is: " + rolledValue);
 			}
-			while (value != 7 && value != point);
+			while (rolledValue != 7 && rolledValue != point);
 	
 			// the following is equivalent to the above.
 			// Is it easier to understand?
@@ -91,17 +91,17 @@ public class CrapsGame
 //					break;
 //			}
 			
-			if (value==7)
+			if (rolledValue==7)
 			{
 				// loss: record losses and return false
 				println("You lose throwing a 7.");
 				losses[steps]++;
 				return false;
 			}
-			else if (value==point)
+			else if (rolledValue==point)
 			{
 				// win: record wins and return false
-				println("You win by throwing your point " + value);
+				println("You win by throwing your point " + rolledValue);
 				wins[steps]++;
 				return true;
 
